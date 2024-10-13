@@ -1,0 +1,23 @@
+{
+  "name": "@hoqn/motioned-react",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "rimraf": "^6.0.1",
+    "vite": "^5.4.8"
+  },
+  "scripts": {
+    "dev": "tsc --watch & vite build --watch",
+    "build": "tsc && vite build"
+  }
+}
