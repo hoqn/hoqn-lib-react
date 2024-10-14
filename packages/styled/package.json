@@ -5,7 +5,7 @@
     "email": "akzm9999@gmail.com",
     "url": "https://github.com/hoqn"
   },
-  "homepage": "https://github.com/hoqn/styled",
+  "homepage": "https://docs.hoqn.dev/styled-react",
   "version": "0.1.0",
   "files": [
     "dist"
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "rimraf ./dist && tsc && vite build",
-    "dev": "vite"
+    "dev": "tsc --watch & vite build --watch"
   },
   "dependencies": {
     "murmurhash-wasm": "^1.3.0"
