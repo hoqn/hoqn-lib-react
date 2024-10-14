@@ -1,9 +1,9 @@
-import { forwardRef, useEffect, useMemo } from "react";
+import { forwardRef, useEffect, useInsertionEffect, useMemo } from "react";
 import { jsx } from "react/jsx-runtime";
 import { CLASSNAME_PREFIX } from "./common";
 import { commitStyles, detachStyle } from "./core";
 import { hash } from "./hash";
-import { AllElementTagName, htmlTags } from "./html-tags";
+import { htmlTags } from "./html-tags";
 
 type PureInterpolation = string | number | undefined | null | boolean;
 type Interpolation<P> = PureInterpolation | ((props: P) => PureInterpolation);
@@ -50,7 +50,7 @@ function createStyledComponent<T extends React.ElementType<any>, P = PropsOf<T>>
         ? props.className + " " + CLASSNAME_PREFIX + hashedStyles
         : CLASSNAME_PREFIX + hashedStyles;
 
-      useEffect(() => {
+      useInsertionEffect(() => {
         commitStyles(hashedStyles, styles);
         return () => detachStyle(hashedStyles);
       }, [hashedStyles]);
