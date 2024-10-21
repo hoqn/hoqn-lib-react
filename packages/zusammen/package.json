@@ -2,7 +2,12 @@
   "name": "@hoqn/zusammen",
   "version": "0.1.0",
   "description": "A simple state management for react",
-  "author": "Hogyun Jeon",
+  "author": {
+    "name": "Hogyun Jeon",
+    "email": "akzm9999@gmail.com",
+    "url": "https://github.com/hoqn"
+  },
+  "homepage": "https://docs.hoqn.dev/zusammen",
   "exports": {
     "./react": {
       "import": "./dist/react.mjs",
